@@ -1,0 +1,46 @@
+/* 초기화 */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul,ol{list-style: none;}
+a{text-decoration: none; color: inherit;}
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #17094e;
+}
+.wrap{
+  min-width: 1300px;
+  margin: auto;
+  
+}
+::placeholder{ /* placeholder의 스타일 변경 */
+  color: #666;
+  font-weight: normal;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+}
+/* ================================================= */
+.on{
+  color: rgb(255, 0, 98);
+}
+header>.wrap{
+  
+  display: flex;
+  padding: 30px;
+  background-color: #17094e;
+  box-shadow: 10px 10px 5px black;
+  color: #f1f1f1;
+  font-size: 20px;
+}
+header>.wrap > div{
+  display: flex;
+  width: 50%;
+}
+header>.wrap>:last-child{
+  justify-content: end;
+  margin-right: 50px;
+}
+header>.wrap>:last-child>p{
+  margin: 0px 50px;
+}

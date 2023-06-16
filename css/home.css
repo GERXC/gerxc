@@ -1,0 +1,63 @@
+.home{
+  min-width: 1300px;
+  margin: auto;
+  
+}
+.home>.wrap{
+  min-height: 1500px;
+  background: url(../img/back.jpg) center/cover;
+  /* background-color: darkslategray; */
+  box-shadow: 10px 10px 5px;
+}
+.home .image_area{
+
+  margin: auto;
+  max-width: 2000px;
+  
+  display: flex;
+  flex-wrap: wrap;
+  padding: 300px;
+  justify-content: center;
+}
+.home img{
+  width: 300px; height: 300px;
+  border: 2px solid midnightblue;
+}
+.home .box{
+  max-height: 300px;
+  position: relative; /* position:absolute를 적용한 자식 요소의 기준이 됨 */
+  overflow: hidden;
+  margin: 20px;
+}
+.home .banner{
+  /* outline: 1px solid red; */
+  width: 1300px;
+  margin: auto;
+  text-align: center;
+  color: #f1f1f1;
+  text-shadow: 10px 10px 5px navy; 
+}
+.home h1{
+  padding-top: 200px;
+  font-size: 60px;
+  
+}
+.home p{
+  font-size: 36px;
+  padding: 46px;
+}
+
+.home .box::after{
+  content:"";
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+  opacity: 0;
+  transform:scale(1) translateY(300px);
+}
+.home .box:hover::after{ /* .box에 마우스를 올리면 자손 요소인 가상 요소가 화면에 나타남 */
+  opacity:1;
+  transform:scale(1) translateY(0px);
+}
